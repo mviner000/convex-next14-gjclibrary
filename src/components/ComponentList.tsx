@@ -22,7 +22,7 @@ const ComponentList = () => {
   if (!components) return <div className="text-center p-4">Loading...</div>;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 mt-3">
       <h2 className="text-2xl font-bold mb-4">Saved Components</h2>
       {components.length === 0 ? (
         <p className="text-center text-gray-500">No components created yet</p>

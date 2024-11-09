@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ConvexClientProvider } from "./ConvexClientProvider";
-import { NavbarStyleViewer } from "@/components/ReusableNavbar";
 import Script from 'next/script'
+import { GJCNavbar } from "@/components/gjc/gjcNavbar";
+import GJCLeftSideBar from "@/components/gjc/gjcLeftSideBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,8 +34,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ConvexClientProvider>
-          <NavbarStyleViewer />
-          {children}
+          <div className="relative min-h-screen">
+            <GJCNavbar />
+            <div className="flex pt-16"> {/* Add padding-top to account for navbar height */}
+              <GJCLeftSideBar />
+              <main className="flex-1 pl-64 container mx-auto pt-10"> {/* Add padding-left to account for sidebar width */}
+                {children}
+              </main>
+            </div>
+          </div>
         </ConvexClientProvider>
       </body>
     </html>
