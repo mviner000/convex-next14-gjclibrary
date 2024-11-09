@@ -3,6 +3,7 @@ import { ComponentStyleEditor } from "@/components/ComponentStyleEditor";
 export default function LeftSideBarSettingsPage() {
   return (
     <>
+    <div className="p-6">
     <h1 className="text-6xl font-bold">Left Side Bar UI Settings</h1>
       <ComponentStyleEditor 
       componentNames={[
@@ -19,6 +20,7 @@ export default function LeftSideBarSettingsPage() {
           "leftSideBar.footer.parent",
           "leftSideBar.footer.text"
         ]} />
+      </div>
     </>
   );
 }

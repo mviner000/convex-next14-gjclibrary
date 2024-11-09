@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import SettingsBreadcrumb from "@/components/SettingsBreadcrumb";
+import GJCLeftSideBar from '@/components/gjc/gjcLeftSideBar';
 
 interface SettingsLayoutProps {
   children: ReactNode;
@@ -7,9 +8,10 @@ interface SettingsLayoutProps {
 
 export default function SettingsLayout({ children }: SettingsLayoutProps) {
   return (
-    <div>
+    <main className="pt-32 pl-72">
+      <GJCLeftSideBar />
       <SettingsBreadcrumb />
       {children}
-    </div>
+    </main>
   );
 }

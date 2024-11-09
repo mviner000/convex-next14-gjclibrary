@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/tooltip"
 import { useQuery } from "convex/react"
 import { api } from "../../../convex/_generated/api"
-import { cn } from "@/lib/utils"
+import { cn } from "../../../lib/utils"
 import { GJCButton } from "../ui/gjc_ui/gjcButton"
 
 export default function GJCLeftSideBar() {
@@ -76,7 +76,7 @@ export default function GJCLeftSideBar() {
       }
 
     return (
-        <aside className={cn("fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 flex-shrink-0 overflow-y-auto border-r p-4", leftSidebarStyle.tailwindClasses)}>
+        <aside className={cn("pt-16 fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 flex-shrink-0 overflow-y-auto border-r p-4", leftSidebarStyle.tailwindClasses)}>
         <nav className="space-y-2">
             <TooltipProvider>
             <Tooltip>
